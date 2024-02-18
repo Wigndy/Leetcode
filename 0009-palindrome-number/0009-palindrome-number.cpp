@@ -1,17 +1,16 @@
 class Solution {
 public:
     bool isPalindrome(int x) {
-        std::string string_x = std::to_string(x);
-        int left_index = 0;
-        int right_index = string_x.length() - 1;
-
-        while (left_index < right_index){
-            if (string_x[left_index] != string_x[right_index]){
-                return false;
-            }
-            left_index++;
-            right_index--;
+        if (x < 0 || (x != 0 && x % 10 == 0)) return 0;
+        long temp = x;
+        long converse = 0;
+        int digit = 0;
+        while(temp != 0)
+        {
+            digit = temp % 10;
+            converse = converse * 10 + digit;
+            temp /= 10;
         }
-        return true;
+        return (converse == x);
     }
 };

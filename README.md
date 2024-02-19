@@ -1,2 +1,2 @@
 # Leetcode
-Upload daily from 10th February 2024
+Upload frequently from 10th February 2024
